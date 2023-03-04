@@ -6,7 +6,7 @@ const Hero = ()=>{
         <>
             <div className={styles.hero_container}>
                 <div className={styles.slide_item}>
-                    <img src="/images/hero_bg.jpg" className={styles.hero_bg} alt="" />
+                    <Image src="/images/hero_bg.jpg" className={styles.hero_bg} alt="hero bg" />
                     
                     <div className={styles.content_wrapper}>
                         <div className={`${styles.container} container d-flex align-items-center justify-content-between`}>
