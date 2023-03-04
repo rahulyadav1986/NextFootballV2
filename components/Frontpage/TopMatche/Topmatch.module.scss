@@ -1,0 +1,238 @@
+@import "../../../src/styles/extend.scss";
+.topmatch_wrapper{
+    width: 100%;
+    padding: 3rem 0;
+    position: relative;
+    background-color: #f3f3f3;
+    h2{
+        text-align: center;
+        font-size: 6rem;
+        margin-bottom: 2rem;
+    }
+    .match_grid_wrapper{
+        margin: 0 -15px;
+        .grid_item{
+            flex: 0 0 33.33333%;
+            width: 33.33333%;
+            padding: 0 15px;
+            margin-bottom: 30px;
+            .blank_avator{
+                width: 100%;
+                height: 19.9rem;
+                background-color: #ddd;
+            }
+            .video_wrapper{
+                width: 100%;
+            }
+            .image_wrapper{
+                width:100%;
+                height:0px;
+                position:relative;
+                padding-bottom:calc(56.25%);
+                background-color: #ddd;
+                position: relative;
+                cursor: pointer;
+                &::before{
+                    @extend .position_absolute_all0;
+                    content: "Not Found";
+                    color: #333;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: var(--title-fonts);
+                    font-size: 1.5rem;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    @extend .position_absolute_all0;
+                    object-fit: cover;
+                }
+                .video_link{
+                    width: 100%;
+                    height: 100%;
+                    @extend .position_absolute_all0;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        width: auto;
+                        height: auto;
+                        position: relative !important;
+                    }
+                }
+            }
+            
+            .details{
+                background-color: #ededed;
+                padding: 2rem;
+                
+            }
+            .compitition{
+                width: 100%;
+                padding:0;
+                .trophy{
+                    width: 2rem !important;
+                    margin-right: 1rem;
+                    position: relative !important;
+                }
+                h6{
+                    font-size: 14px;
+                    color: var(--primary-color);
+                }
+            }
+            .team_match{
+                margin-top: 1rem;
+                width: 100%;
+                .versus{                   
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 700;
+                    font-family: var(--title-fonts);
+                }
+                img{
+                    width: 2rem !important;
+                    margin-right: 8px;
+                    position: relative !important;
+                }
+                h3{
+                    
+                    font-size: 14px;
+                    color: var(--dark-color);
+                }
+                a{
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    color: var(--primary-color);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+
+.pop_over_latest_video{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    // visibility: hidden;
+    // opacity: 0;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend .transition;
+    .compitition{
+        img{
+            width: 5rem !important;
+            margin-right: 12px;
+            position: relative !important;
+            
+        }
+        h2{
+            font-size: 2rem;
+            margin: 0;
+            color: var(--primary-color);
+        }
+        h6{
+            font-size: 16px;
+        }
+    }
+    .inner_pop{
+        width: calc(50%);
+        height: 700px;
+        background-color: #fff;
+        padding: 3rem 3rem 3rem 3rem;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 1) 1px 0 20px;
+        box-shadow: rgba(0,0,0,.1) 1px 0 10px;
+        overflow: auto;
+    }
+    .team_match{
+        margin-top: 2rem;
+        width: 100%;
+        li{
+            &:last-child{
+                img{
+                    order: 2;
+                    margin:0 0 0 8px
+                }
+            }
+        }
+        .versus{                   
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: var(--title-fonts);
+        }
+        img{
+            width: 2rem !important;
+            margin-right: 8px;
+            position: relative !important;
+        }
+        h3{
+            
+            font-size: 16px;
+            color: var(--dark-color);
+        }
+        a{
+            font-size: 13px;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+    }
+    &.active{
+        visibility: visible;
+        opacity: 1;
+    }
+    .video_wrapper{
+        width: 100%;
+        flex: 0 0 100%;
+        
+
+        h6{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .videos{
+            width: 100%;
+            
+        }
+        .main_video{
+            width: 100%;
+            margin-top: 2rem;
+            background-color: #f7f7f7;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.2) 1px 0 10px;
+           
+        }
+    }
+}
+
+
+@media only screen and (max-width:600px){
+    .topmatch_wrapper{
+        .match_grid_wrapper{
+            .grid_item{
+                flex:0 0 100%
+            }
+        }
+    }
+    .pop_over_latest_video{
+        .inner_pop{
+            width: calc(100% - 2rem);
+            height: auto;
+            max-height: calc(100% - 2rem);
+            overflow: auto;
+        }
+    }
+}

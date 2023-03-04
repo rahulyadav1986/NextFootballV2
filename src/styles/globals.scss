@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+:root{
+  --primary-color:#ff3333;
+  --secondary-color:#ffcc33;
+  --dark-color:#333333;
+  --body-fonts: 'Roboto', sans-serif;
+  --title-fonts: 'Jost', sans-serif;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-fonts); 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, a{
+  font-family: var(--title-fonts); 
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  max-width: 126rem;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.d-flex{
+  display: flex;
+}
+.align-items-center{
+  align-items: center;
+}
+.align-items-start{
+  align-items: flex-start;
+}
+.align-items-end{
+  align-items: flex-end;
+}
+.justify-content-center{
+  justify-content: center;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.justify-content-start{
+  justify-content: flex-start;
+}
+.justify-content-end{
+  justify-content: flex-end;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width:1400px){
+  html{
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width:900px){
+  html{
+    font-size: 38%;
+  }
+}
+
+@media only screen and (max-width:600px){
+  html{
+    font-size: 30%;
+  }
+}

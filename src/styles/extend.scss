@@ -1,0 +1,14 @@
+.position_absolute_all0{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.position_absolute_center{
+    @extend .position_absolute_all0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.transition{
+    transition: all .5s ease-in;
+}

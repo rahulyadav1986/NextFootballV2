@@ -1,0 +1,59 @@
+.skelbox{
+    width: 100% !important;
+    height: 25rem;
+    border-radius: 0 !important;
+}
+
+.skeltag{
+    width: 2rem !important;
+    height: 2rem;
+    margin-right: 10px;
+}
+.skelheading{
+    width: 20rem !important;
+    height: 2rem;
+}
+.skelpara{
+    width: 100% !important;
+    height: 1rem;
+    margin-bottom: 0;
+}
+.skelbutton{
+    width: 10rem !important;
+    height: 4rem;
+    margin-top: 1rem;
+
+}
+
+.skelline{
+    width: 10rem !important;
+    height: 1rem;
+}
+.skelvs{
+    width: 2rem !important; 
+    height: 2rem;
+    border-radius: 100% !important;
+}
+
+.grid_item{
+    flex: 0 0 33.33333%;
+    width: 33.33333%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    .compitition{
+        width: 100%;
+        padding:0;
+        margin-top: 1rem;
+    }
+    .team_match{
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .skelbox{
+        height: 17rem;
+    }
+  }
+
