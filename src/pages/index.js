@@ -32,7 +32,7 @@ const options = {
 	}
 };
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const responseLatest= await fetch(`https://free-football-soccer-videos.p.rapidapi.com/`, options);
   const Data = await responseLatest.json();
   return{
