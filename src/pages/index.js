@@ -2,6 +2,8 @@ import Hero from 'components/Frontpage/Hero/Hero'
 import LatestMatch from 'components/Frontpage/Latestmatch/LatestMatch'
 import TopMatch from 'components/Frontpage/TopMatche/Topmatch';
 import { ImageSkeleton, NewGameSkeleton } from 'components/Skeletons/Skeleton';
+import { enviourment } from 'next.config';
+
 import Head from 'next/head'
 import { useEffect, useState } from 'react';
 
@@ -27,13 +29,13 @@ export default function Home({Data}) {
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '9e21a3cee8mshf98cb345da11a90p17846bjsnff4266b5ca3e',
-		'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com'
+		'X-RapidAPI-Key': `${enviourment.MYFOOTBALLAPIKEY}`,
+		'X-RapidAPI-Host': `${enviourment.url}`
 	}
 };
 
 export async function getServerSideProps(){
-  const responseLatest= await fetch(`https://free-football-soccer-videos.p.rapidapi.com/`, options);
+  const responseLatest= await fetch(`https://${enviourment.url}/`, options);
   const Data = await responseLatest.json();
   return{
     props:{
