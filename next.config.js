@@ -19,7 +19,7 @@ const nextConfig = {
   },
   images:{
     domains: ['www.scorebat.com'],
-    unoptimized: true,
+    // unoptimized: true,
   },
   enviourment : {
     MYFOOTBALLAPIKEY : ['9e21a3cee8mshf98cb345da11a90p17846bjsnff4266b5ca3e'],
