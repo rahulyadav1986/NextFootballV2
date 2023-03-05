@@ -1,4 +1,4 @@
-@import "../../../src/styles/extend.scss";
+@import "../../../../src/styles/extend.scss";
 
 .hero_container{
     width: 100%;
@@ -7,6 +7,14 @@
     background: #373542;
     overflow: hidden;
     position: relative;
+    &.inner{
+        height: 40rem;
+        .content_wrapper{
+            .hero_avator{
+                width: 20rem !important;
+            }
+        }
+    }
     .content_area{
         margin: 0;
     }
@@ -76,7 +84,7 @@
             line-height: 28px;
             color: #fff;
         }
-        h3{
+        h3, h1{
             text-transform: uppercase;
             letter-spacing: 4px;
             line-height: 6rem;
@@ -93,6 +101,13 @@
                 letter-spacing: 19.4px;
                 color: #fff;
                 font-weight: 500;
+            }
+        }
+        h1{
+            font-size: 5rem;
+            margin-top: 12.4rem;
+            span{
+                font-size: 5rem;
             }
         }
         
