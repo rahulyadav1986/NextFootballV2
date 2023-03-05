@@ -20,8 +20,11 @@ const LatestMatch = ({Data})=>{
                    <div className={styles.left_details}>
                         <Image src="/images/bg-6.webp" fill={true} alt="thumbnail"  />
                    </div> 
-                   <div className={styles.right_details}>                    
-                    <h2>Latest Matches</h2>
+                   <div className={styles.right_details}>   
+                   <div className="heading_wrap d-flex align-items-center">
+                        <Image src="/images/ball_vector.png" fill={true} />
+                        <h2>Latest <span>Matches</span></h2>
+                    </div> 
                     <div className={`${styles.match_details} d-flex flex-wrap`}>
                         {
                         Data.slice(0,3).map((item,i)=>{

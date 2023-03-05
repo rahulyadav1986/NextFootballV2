@@ -141,7 +141,30 @@
 
 @media only screen and (max-width:700px){
     .hero_container{
-        .content_wrapper{
+        .down_arrow{
+            display: none;
+        }
+        &.inner{
+            .content_wrapper{
+                .hero_avator{
+                    display: none
+                }
+                h1{
+                    margin-top: 18.4rem;
+                }
+            } 
+        }
+        .content_wrapper{ 
+            h3{
+                font-size: 5rem;
+                span{                    
+                    font-size: 2.5rem;
+                    letter-spacing: 4.4px;
+                }
+            }
+            .hero_avator{
+                width: 20rem !important;
+            }
             .container{
                 flex-direction: column;
                 justify-content: center;

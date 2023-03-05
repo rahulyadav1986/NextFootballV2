@@ -2,16 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      '/': { page: '/' },
-      '/about': { page: '/about' }
+  // exportPathMap: async function (
+  //   defaultPathMap,
+  //   { dev, dir, outDir, distDir, buildId }
+  // ) {
+  //   return {
+  //     '/': { page: '/' },
+  //     '/about': { page: '/about' }
       
-    }
-  },
+  //   }
+  // },
   pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
   trailingSlash: true,
   eslint: {

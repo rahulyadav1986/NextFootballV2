@@ -3,6 +3,7 @@ import TopMatch from '@/components/Frontpage/TopMatche/Topmatch';
 import Head from 'next/head';
 import React from 'react'
 import { enviourment } from 'next.config';
+import AboutUs from '@/components/About/about';
 const ContactUs = ({Data})=>{
     return(
         <>
@@ -13,6 +14,7 @@ const ContactUs = ({Data})=>{
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Hero />
+            <AboutUs />
             
         </>
     )

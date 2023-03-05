@@ -1,7 +1,7 @@
 @import "../../../../src/styles/extend.scss";
 .topmatch_wrapper{
     width: 100%;
-    padding: 3rem 0;
+    padding: 6rem 0;
     position: relative;
     background-color: #f3f3f3;
     
@@ -91,6 +91,7 @@
                 }
                 img{
                     width: 2rem !important;
+                    height: auto !important;
                     margin-right: 8px;
                     position: relative !important;
                 }

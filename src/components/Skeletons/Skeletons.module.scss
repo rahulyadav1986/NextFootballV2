@@ -51,6 +51,16 @@
     }
 }
 
+@media only screen and (max-width: 600px){
+    .grid_item{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .skelbox{
+        height: 35rem;
+    }
+}
+
 @media only screen and (max-width: 450px){
     .skelbox{
         height: 17rem;

@@ -1,3 +1,4 @@
+@import "../../styles/extend.scss";
 .header{
     width: 100%;
     position: absolute;
@@ -5,6 +6,14 @@
     left: 0;
     z-index: 99;
     padding: 20px 0;
+    .hamburger{
+        width: 6rem;
+        height: 6rem;
+        background-color: var(--primary-color);
+        color: #fff;
+        font-size: 2rem;
+        display: none !important;
+    }
     .logo{
         width: 80px;
         img{
@@ -65,5 +74,37 @@
         }
     }
     
+}
+
+@media only screen and (max-width: 700px){
+    .header{
+        .hamburger{
+            display: flex !important;
+        }
+        .menu_area{
+            width: 250px;
+            background-color: var(--primary-color);
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            display: block;
+            padding: 3rem;
+            opacity: 0;
+            transition: all .5s ease-in;
+            &.open_menu{
+                right: 0;
+                opacity: 1;
+            }
+            li{
+                margin-bottom: 2rem;
+                a{
+                    &.active{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
 }
 
