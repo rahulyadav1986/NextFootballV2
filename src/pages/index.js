@@ -8,7 +8,24 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react';
 
 
-// const inter = Inter({ subsets: ['latin'] })
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': `${enviourment.MYFOOTBALLAPIKEY}`,
+		'X-RapidAPI-Host': `${enviourment.url}`
+	}
+};
+
+export async function getServerSideProps(){
+  const responseLatest= await fetch(`https://${enviourment.url}/`, options);
+  const Data = await responseLatest.json();
+  console.log(Data)
+  return{
+    props:{
+      Data: Data,
+    }
+  }
+}
 
 export default function Home({Data}) {
   
@@ -26,20 +43,5 @@ export default function Home({Data}) {
     </>
   )
 }
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': `${enviourment.MYFOOTBALLAPIKEY}`,
-		'X-RapidAPI-Host': `${enviourment.url}`
-	}
-};
 
-export async function getServerSideProps(){
-  const responseLatest= await fetch(`https://${enviourment.url}/`, options);
-  const Data = await responseLatest.json();
-  return{
-    props:{
-      Data: Data,
-    }
-  }
-}
+

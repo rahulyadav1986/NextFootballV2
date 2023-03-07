@@ -25,7 +25,7 @@ const Header = ()=>{
                             <Link  onClick={menuToggle} href="/" className={router.pathname == "/" ? `${styles.active}` : ""}>Home</Link>
                         </li>
                         <li>
-                            <Link  onClick={menuToggle} href="/about-us" className={router.pathname == "/about" ? `${styles.active}` : ""}>About</Link>
+                            <Link  onClick={menuToggle} href="/about-us" className={router.pathname == "/about-us" ? `${styles.active}` : ""}>About</Link>
                         </li>
                         <li>
                             <Link  onClick={menuToggle} href="/games" className={router.pathname == "/games" ? `${styles.active}` : ""}>Games</Link>
